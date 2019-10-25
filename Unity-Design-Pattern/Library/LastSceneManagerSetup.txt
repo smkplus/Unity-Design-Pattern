@@ -1,0 +1,4 @@
+sceneSetups:
+- path: Assets/Scripts/Command Pattern/Walker/Walker.unity
+  isLoaded: 1
+  isActive: 1
