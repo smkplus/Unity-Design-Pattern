@@ -19,7 +19,7 @@ Wikipedia says
 **Programmatic Example**
 
 First of all we have the receiver that has the implementation of every action that could be performed
-```
+```c#
 // Receiver
 using UnityEngine;
 
@@ -39,7 +39,7 @@ public class Bulb : MonoBehaviour
 ```
 then we have an interface that each of the commands are going to implement and then we have a set of commands
 
-```
+```c#
 public Bulb bulb;
 
 public interface ICommand
@@ -113,7 +113,7 @@ public class RemoteControl
 }
 ```
 Then we have an `Invoker` with whom the client will interact to process any commands
-```
+```c#
 // Invoker
 class RemoteControl
 {
@@ -124,7 +124,7 @@ class RemoteControl
 }
 ```
 Finally let's see how we can use it in our client
-```
+```c#
  var turnOn = new TurnOn(bulb);
  var turnOff = new TurnOff(bulb);
 
