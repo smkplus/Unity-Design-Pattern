@@ -148,13 +148,63 @@ Photoshop History
 
 ![photoshop](https://i.ytimg.com/vi/5RNLIXgRb7A/hqdefault.jpg)
 
-another way to Implement Command Pattern is using a Action.
+Another way to Implement Command Pattern is using a Action.
+
 Action is a Delegate. It is defined like this:
 
-```public delegate void Action();```
+```c#
+public delegate void Action();
+```
 
 You could create your own delegate types similarly to how you would create abstract methods; you write the signature but no implementation. You then create instances of these delegates by taking the reference of a method.
 
 
 Delegate in C# is a reference type, which holds a reference to the function and invokes the function when called with an Invoke method. If one is coming from C++/C background, delegate is like a pointer to a function. 
+
+```c#
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
+using UnityEngine;
+
+public class Example : MonoBehaviour
+{
+   public List<Action> actions = new List<Action>();
+
+   private void Start()
+   {
+      actions.Add(Method1);
+      actions.Add(Method2);
+      actions.Add(Method3);
+
+      StartCoroutine(Replay());
+   }
+
+
+   public void Method1()
+   {
+     print(nameof(Method1)); 
+   }  
+   
+   public void Method2()
+   {
+     print(nameof(Method2));
+   }   
+   
+   public void Method3()
+   {
+     print(nameof(Method3));
+   }
+
+   public IEnumerator Replay()
+   {
+      foreach (var action in actions.ToList())
+      {
+         action.Invoke();
+         yield return new WaitForSeconds(0.5f);
+      }
+   }
+}
+```
 
