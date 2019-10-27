@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scripts/Command Pattern/Walker/Walker.unity
+- path: Assets/Scripts/Command Pattern/MemorySimon/MemorySimon.unity
   isLoaded: 1
   isActive: 1
