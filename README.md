@@ -207,6 +207,21 @@ public class Example : MonoBehaviour
    }
 }
 ```
+[Let Your Players Undo Their In-Game Mistakes With the Command Pattern](https://gamedevelopment.tutsplus.com/tutorials/let-your-players-undo-their-in-game-mistakes-with-the-command-pattern--gamedev-1391)
+
+Best approach to undo and redo is using Stack
+
+```c#
+private Stack<Command> undos = new Stack<Command>();
+private Stack<Command> redos = new Stack<Command>();
+```
+
+
+![image](https://user-images.githubusercontent.com/16706911/67633063-67c6c580-f8c0-11e9-9837-e57a7032b904.png)
+
+
+
+
 ### [Implementing The Command Pattern In Unity](https://www.raywenderlich.com/3067863-implementing-the-command-pattern-in-unity)
 
 ![cmdUnity08](https://user-images.githubusercontent.com/16706911/67630097-47364580-f897-11e9-95b8-88a5343d4c9a.gif)
