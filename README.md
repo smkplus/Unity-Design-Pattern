@@ -148,7 +148,7 @@ Photoshop History
 
 ![photoshop](https://i.ytimg.com/vi/5RNLIXgRb7A/hqdefault.jpg)
 
-Another way to Implement Command Pattern is using a Action.
+Another way to Implement Command Pattern is using a List of Actions.
 
 Action is a Delegate. It is defined like this:
 
@@ -207,4 +207,9 @@ public class Example : MonoBehaviour
    }
 }
 ```
+### [Implementing The Command Pattern In Unity](https://www.raywenderlich.com/3067863-implementing-the-command-pattern-in-unity)
+
+![cmdUnity08](https://user-images.githubusercontent.com/16706911/67630097-47364580-f897-11e9-95b8-88a5343d4c9a.gif)
+
+
 
